@@ -11,7 +11,7 @@ bool canOnlyReplaceBlock(Line line) {
 }
 
 int memoryCacheMapping(int address, Cache* cache) {
-    return address % cache->size;
+    return address % cache->size; //mexer aqui.
 }
 
 void updateMachineInfos(Machine* machine, Line* line) {
@@ -21,7 +21,7 @@ void updateMachineInfos(Machine* machine, Line* line) {
             break;
 
         case 2:
-            machine->hitL2 += 1;
+            machine->hitL2 += 1; 
             machine->missL1 += 1;
             break;
         
@@ -31,7 +31,7 @@ void updateMachineInfos(Machine* machine, Line* line) {
             machine->missL2 += 1;
             break;
     }
-    machine->totalCost += line->cost;
+    machine->totalCost += line->cost; 
 }
 
 Line* MMUSearchOnMemorys(Address add, Machine* machine) {
