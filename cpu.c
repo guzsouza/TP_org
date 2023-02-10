@@ -15,6 +15,7 @@ void start(Machine* machine, Instruction* instructions, int* memoriesSize) {
     machine->instructions = instructions;
     machine->hitL1 = 0;
     machine->hitL2 = 0;
+    //machine->hitL3 = 0;
     machine->hitRAM = 0;
     machine->missL1 = 0;
     machine->missL2 = 0;
