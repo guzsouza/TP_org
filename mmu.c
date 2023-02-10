@@ -52,7 +52,6 @@ Line* MMUSearchOnMemorys(Address add, Machine* machine) {
     } else if (cache2[l2pos].tag == add.block) { 
         /* Block is in memory cache L2 */
         cache2[l2pos].tag = add.block;
-        cache2[l2pos].updated = false;
         cache2[l2pos].cost = COST_ACCESS_L1 + COST_ACCESS_L2;
         cache2[l2pos].cacheHit = 2;
         // !Can be improved?
